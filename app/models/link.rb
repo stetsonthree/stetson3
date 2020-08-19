@@ -9,5 +9,10 @@ class Link < ApplicationRecord
       errors.add(:original_url, "Invalid URL format")
     end
   end
+
+  def shortened_url
+    "http://localhost:3000/#{lookup_code}"
+  end
+  
   
 end
